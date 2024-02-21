@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>cn.mrcode.cache.eshop</groupId>
+  <artifactId>cache-eshop</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+
+  <name>cache-eshop</name>
+  <description>Eshop Cache Project</description>
+
+  <modules>
+    <module>eshop-eureka-server</module>
+    <module>eshop-eurela-client</module>
+    <module>greeting-service</module>
+    <module>eshop-turbine</module>
+    <module>zuul-server</module>
+    <module>config-server</module>
+    <module>sleuth-server</module>
+    <module>user-server</module>
+    <module>eshop-product-service</module>
+    <module>eshop-price-service</module>
+    <module>eshop-inventory-service</module>
+    <module>eshop-datasync-service</module>
+    <module>eshop-dataaggr-service</module>
+    <module>eshop-datalink-service</module>
+    <module>eshop-one-service</module>
+  </modules>
+
+  <properties>
+    <java.version>1.8</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <repositories>
+    <!-- Add your repositories here -->
+  </repositories>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>2.1.5.RELEASE</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+          <encoding>${project.build.sourceEncoding}</encoding>
+        </configuration>
+      </plugin>
+      <!-- Add other plugins as needed -->
+    </plugins>
+  </build>
+
+  <!-- Add dependency management here -->
+
+</project>
